@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Mohau Sebiloane - Portfolio</title>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="mohau_styles.css">
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#3b82f6",
+                        "primary-dark": "#2563eb",
+                        "background-light": "#f8fafc",
+                        "background-dark": "#0f172a",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1e293b",
+                        "text-light": "#334155",
+                        "text-dark": "#e2e8f0",
+                        "text-muted-light": "#64748b",
+                        "text-muted-dark": "#94a3b8",
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                        serif: ["Playfair Display", "serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                    animation: {
+                        blob: "blob 7s infinite",
+                    },
+                    keyframes: {
+                        blob: {
+                            "0%": { transform: "translate(0px, 0px) scale(1)" },
+                            "33%": { transform: "translate(30px, -50px) scale(1.1)" },
+                            "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
+                            "100%": { transform: "translate(0px, 0px) scale(1)" },
+                        },
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-sans transition-colors duration-300 antialiased min-h-screen flex flex-col">
+
+    <div id="header">
+          <div class="logo-container">
+            <div class="logo-icon">
+              <img src="./logo.svg" alt="">
+            </div>
+            <h2>Interjection</h2>
+          </div>
+          <div class="nav-container">
+            <div class="nav-links">
+              <a href="#">Home</a>
+              <a href="#">About Us</a>
+              <a href="#">Products</a>
+              <a href="#">Contact</a>
+            </div>
+          </div>
+        </div>
+
+    <header class="relative pt-16 pb-20 lg:pt-24 lg:pb-28 overflow-hidden" id="about">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <div class="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-primary uppercase bg-blue-50 dark:bg-blue-900/30 rounded-full">
+                        Software Developer
+                    </div>
+                    <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white sm:text-5xl md:text-6xl lg:text-6xl font-serif mb-6">
+                        Hello, I'm <br class="hidden lg:block" />
+                        <span class="text-primary">Mohau Sebiloane</span>
+                    </h1>
+                    <p class="mt-3 text-base text-text-muted-light dark:text-text-muted-dark sm:mt-5 sm:text-lg md:mt-5 md:text-xl lg:mx-0 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        I am a passionate software developer with a strong foundation in Computer Science and Mathematics. Currently based in South Africa, I specialize in full-stack development, cloud platforms, and algorithmic problem solving. I build scalable solutions that optimize performance and enhance user experience.
+                    </p>
+                    <div class="mt-8 sm:mt-10 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                        <a class="flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary-dark md:py-4 md:text-lg shadow-lg hover:shadow-xl transition-all" href="#projects">
+                            View Projects
+                        </a>
+                        <a class="flex items-center justify-center px-8 py-3 border border-gray-300 dark:border-gray-600 text-base font-medium rounded-md text-gray-700 dark:text-gray-200 bg-white dark:bg-surface-dark hover:bg-gray-50 dark:hover:bg-gray-700 md:py-4 md:text-lg transition-all" href="https://github.com/MohauSebiloane" target="_blank">
+                            <i class="fab fa-github mr-2"></i> GitHub
+                        </a>
+                    </div>
+                    <div class="mt-8 flex justify-center lg:justify-start space-x-6 text-text-muted-light dark:text-text-muted-dark">
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-primary"></i>
+                            <span>Spokane, WA</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-primary"></i>
+                            <span>work.mohau@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 lg:mt-0 lg:col-span-5 relative flex justify-center">
+                    <div class="absolute top-0 -right-4 -z-10 w-72 h-72 bg-purple-300 dark:bg-purple-900/50 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+                    <div class="absolute -bottom-8 left-20 -z-10 w-72 h-72 bg-blue-300 dark:bg-blue-900/50 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-gray-700 transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                        <img alt="Portrait of Mohau Sebiloane" class="w-full h-auto object-cover max-w-sm lg:max-w-md" src="mohau.jpg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-16 bg-white dark:bg-surface-dark border-t border-gray-100 dark:border-gray-800" id="skills">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-serif font-bold text-gray-900 dark:text-white sm:text-4xl">Technical Proficiency</h2>
+                <p class="mt-4 text-lg text-text-muted-light dark:text-text-muted-dark max-w-2xl mx-auto">A robust toolkit developed through academic rigor and hands-on industry experience.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                <div class="bg-background-light dark:bg-background-dark rounded-xl p-8 shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <div class="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-lg text-primary mr-4">
+                            <i class="fas fa-code text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Programming & Frameworks</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300">Python</span>
+                        <span class="px-3 py-1 bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300">Java</span>
+                        <span class="px-3 py-1 bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300">C++</span>
+                        <span class="px-3 py-1 bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300">C</span>
+                        <span class="px-3 py-1 bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300">Android Development</span>
+                        <span class="px-3 py-1 bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300">JavaScript</span>
+                        <span class="px-3 py-1 bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300">SQL</span>
+                        <span class="px-3 py-1 bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300">Angular</span>
+                        <span class="px-3 py-1 bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300">React</span>
+                        <span class="px-3 py-1 bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300">React Native</span>
+                        <span class="px-3 py-1 bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300">AWS</span>
+                    </div>
+                </div>
+                <div class="bg-background-light dark:bg-background-dark rounded-xl p-8 shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <div class="p-3 bg-green-100 dark:bg-green-900/30 rounded-lg text-green-600 mr-4">
+                            <i class="fas fa-brain text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Analysis & Design</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-text-muted-light dark:text-text-muted-dark">Algorithmic problem solving</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-text-muted-light dark:text-text-muted-dark">Wireframing & Prototyping</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-text-muted-light dark:text-text-muted-dark">Technical Communication</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-text-muted-light dark:text-text-muted-dark">Performance Optimization</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-background-light dark:bg-background-dark" id="experience">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl font-serif font-bold text-gray-900 dark:text-white sm:text-4xl">Professional Experience</h2>
+                    <p class="mt-2 text-text-muted-light dark:text-text-muted-dark">Detailed overview of my professional journey and contributions.</p>
+                </div>
+            </div>
+            <div class="relative border-l-2 border-gray-200 dark:border-gray-700 ml-3 md:ml-6 space-y-14">
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute -left-[9px] top-0 h-5 w-5 rounded-full border-4 border-white dark:border-background-dark bg-primary"></div>
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Part-time Junior Software Developer</h3>
+                        <span class="text-sm font-medium text-primary bg-blue-50 dark:bg-blue-900/20 px-3 py-1 rounded-full mt-2 sm:mt-0">Dec 2025 – Current</span>
+                    </div>
+                    <div class="text-base font-semibold text-gray-700 dark:text-gray-300 mb-4">Whitworth University <span class="text-text-muted-light dark:text-text-muted-dark font-normal">| Spokane, WA</span></div>
+                    <div class="bg-white dark:bg-surface-dark p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800">
+                        <ul class="list-disc list-outside ml-4 text-text-muted-light dark:text-text-muted-dark space-y-2 mb-6">
+                            <li>Delivered a application for uploading and consuming liturgical material in the Spokane Presbytery</li>
+                            <li>Scaled a dockerised Infrastructure to handle 10x load as before</li>
+                            <li>Designed telemetry measures and error-logging</li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2 pt-2 border-t border-gray-100 dark:border-gray-800">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-300">Docker</span>
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-300">Graphana Loki</span>
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-300">System Optimization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute -left-[9px] top-0 h-5 w-5 rounded-full border-4 border-white dark:border-background-dark bg-gray-300 dark:bg-gray-600"></div>
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Part-time Junior Software Developer</h3>
+                        <span class="text-sm font-medium text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full mt-2 sm:mt-0">Jan 2025 – Aug 2025</span>
+                    </div>
+                    <div class="text-base font-semibold text-gray-700 dark:text-gray-300 mb-4">Thuto.io <span class="text-text-muted-light dark:text-text-muted-dark font-normal">| Johannesburg, South Africa</span></div>
+                    <div class="bg-white dark:bg-surface-dark p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800">
+                        <ul class="list-disc list-outside ml-4 text-text-muted-light dark:text-text-muted-dark space-y-2 mb-6">
+                            <li>Implemented a Redis-based distributed caching layer and subsystems, decreasing average API response times by 40% and reducing database load by 60% during peak traffic.</li>
+                            <li>Increased successful user login rates by 8%.</li>
+                            <li>Boosted average time-in-app by 8% through flow optimizations.</li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2 pt-2 border-t border-gray-100 dark:border-gray-800">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-300">Redis</span>
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-300">Distributed Caching</span>
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-300">System Optimization</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute -left-[9px] top-0 h-5 w-5 rounded-full border-4 border-white dark:border-background-dark bg-gray-300 dark:bg-gray-600"></div>
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Junior Front-End Developer</h3>
+                        <span class="text-sm font-medium text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full mt-2 sm:mt-0">Dec 2023 – Aug 2023</span>
+                    </div>
+                    <div class="text-base font-semibold text-gray-700 dark:text-gray-300 mb-4">Flowspace Productivity <span class="text-text-muted-light dark:text-text-muted-dark font-normal">| Midrand, South Africa</span></div>
+                    <div class="bg-white dark:bg-surface-dark p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800">
+                        <ul class="list-disc list-outside ml-4 text-text-muted-light dark:text-text-muted-dark space-y-2 mb-6">
+                            <li>Improved responsiveness of the web application, increasing traffic from non-computer devices by 188% and boosting mobile performance scores.</li>
+                            <li>Developed core Android features contributing to a 4% increase in daily active users.</li>
+                            <li>Created intuitive, responsive UI components that improved app usability and decreased bounce rate for new users by 14%.</li>
+                            <li>Collaborated with engineers on migration strategies to new infrastructures that improved performance by 40%.</li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2 pt-2 border-t border-gray-100 dark:border-gray-800">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-300">Web Development</span>
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-300">Android</span>
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-300">UI/UX</span>
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-300">Migration</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute -left-[9px] top-0 h-5 w-5 rounded-full border-4 border-white dark:border-background-dark bg-gray-300 dark:bg-gray-600"></div>
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Junior/Intern Android Developer</h3>
+                        <span class="text-sm font-medium text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full mt-2 sm:mt-0">Nov 2021 – Feb 2022</span>
+                    </div>
+                    <div class="text-base font-semibold text-gray-700 dark:text-gray-300 mb-4">Flowspace Productivity <span class="text-text-muted-light dark:text-text-muted-dark font-normal">| Secunda, South Africa</span></div>
+                    <div class="bg-white dark:bg-surface-dark p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800">
+                        <ul class="list-disc list-outside ml-4 text-text-muted-light dark:text-text-muted-dark space-y-2 mb-6">
+                            <li>Developed core Android features contributing to a 31% increase in tester approval.</li>
+                            <li>Created UI components that improved reported usability by an estimated 10%.</li>
+                            <li>Collaborated with designers to deploy a new content structure that reduced user confusion by 20%.</li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2 pt-2 border-t border-gray-100 dark:border-gray-800">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-300">Android</span>
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-300">Mobile UI</span>
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-300">Team Collaboration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white dark:bg-surface-dark border-t border-b border-gray-100 dark:border-gray-800" id="projects">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-serif font-bold text-gray-900 dark:text-white sm:text-4xl mb-12 text-center">Featured Projects</h2>
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <div class="bg-background-light dark:bg-background-dark rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col h-full border border-gray-100 dark:border-gray-700 group">
+                    <div class="h-48 bg-gradient-to-r from-blue-500 to-indigo-600 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <i class="fas fa-layer-group text-white text-3xl opacity-80"></i>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Bumi Programming Language</h3>
+                        <p class="text-text-muted-light dark:text-text-muted-dark mb-4 text-sm flex-1">
+                            A statically structured, object-orientated language designed for safe execution. Combines performance of C with OO structure, offering explicit memory semantics.
+                        </p>
+                        <div class="mt-auto pt-4 border-t border-gray-200 dark:border-gray-700">
+                            <a class="text-primary hover:text-primary-dark font-medium inline-flex items-center text-sm" href="https://github.com/MohauSebiloane/bumi">
+                                View Source <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-background-light dark:bg-background-dark rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col h-full border border-gray-100 dark:border-gray-700 group">
+                    <div class="h-48 bg-gradient-to-r from-teal-400 to-emerald-600 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <i class="fas fa-university text-white text-3xl opacity-80"></i>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Juncture</h3>
+                        <p class="text-text-muted-light dark:text-text-muted-dark mb-4 text-sm flex-1">
+                            Universal application portal for South African tertiary institutions. Full-stack AngularJS & Firebase application serving over 29,000 potential users.
+                        </p>
+                        <div class="mt-auto pt-4 border-t border-gray-200 dark:border-gray-700">
+                            <span class="text-text-muted-light dark:text-text-muted-dark text-sm italic">Deployed Production App</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-background-light dark:bg-background-dark rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col h-full border border-gray-100 dark:border-gray-700 group">
+                    <div class="h-48 bg-gradient-to-r from-orange-400 to-red-500 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <i class="fas fa-language text-white text-3xl opacity-80"></i>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Ditema tsa dinoko</h3>
+                        <p class="text-text-muted-light dark:text-text-muted-dark mb-4 text-sm flex-1">
+                            Modified codebase for a learning aid for a proposed new writing system for South African Bantu languages, translating Latin alphabet to Ditema.
+                        </p>
+                        <div class="mt-auto pt-4 border-t border-gray-200 dark:border-gray-700">
+                            <a class="text-primary hover:text-primary-dark font-medium inline-flex items-center text-sm" href="http://isibheqe.org.za/demo" target="_blank">
+                                Live Demo <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-background-light dark:bg-background-dark" id="education">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-serif font-bold text-gray-900 dark:text-white sm:text-4xl mb-12 text-center">Education</h2>
+            <div class="space-y-6">
+                <div class="bg-white dark:bg-surface-dark p-6 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white">University of Whitworth</h3>
+                        <p class="text-primary">BS in Computer Science, BS in Mathematics</p>
+                    </div>
+                    <div class="mt-2 sm:mt-0 text-right">
+                        <span class="inline-block bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 text-sm px-3 py-1 rounded-full">Exp. May 2027</span>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-surface-dark p-6 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white">Florida Institute of Technology</h3>
+                        <p class="text-text-muted-light dark:text-text-muted-dark">BS in Computer Science</p>
+                    </div>
+                    <div class="mt-2 sm:mt-0 text-right">
+                        <span class="inline-block bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 text-sm px-3 py-1 rounded-full">May 2024</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800 pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-2xl font-serif font-bold text-gray-900 dark:text-white">Mohau Sebiloane</span>
+                    <p class="text-sm text-text-muted-light dark:text-text-muted-dark mt-1">Building the future, one line of code at a time.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a class="text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors" href="https://github.com/MohauSebiloane">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a class="text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors" href="mailto:work.mohau@gmail.com">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </a>
+                    <a class="text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors" href="https://linkedin.com/in/mohau-sebiloane">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-200 dark:border-gray-700 pt-8 text-center text-sm text-text-muted-light dark:text-text-muted-dark">
+                © 2025 Mohau Sebiloane. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
